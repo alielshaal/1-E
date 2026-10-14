@@ -1,0 +1,280 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PREP 1-E | School Project</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #07152d;
+      color: #ffffff;
+      line-height: 1.7;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 15px;
+      padding: 22px 7%;
+      border-bottom: 1px solid #203858;
+    }
+
+    .logo {
+      font-size: 19px;
+      font-weight: bold;
+      color: #ffffff;
+    }
+
+    .logo span {
+      color: #4d9cff;
+    }
+
+    select {
+      background: #14294a;
+      color: white;
+      border: 1px solid #31517b;
+      padding: 10px;
+      border-radius: 8px;
+      font-size: 14px;
+    }
+
+    main {
+      max-width: 1000px;
+      margin: auto;
+      padding: 55px 7%;
+    }
+
+    .tag {
+      display: inline-block;
+      color: #8bc1ff;
+      background: #122b4d;
+      padding: 6px 14px;
+      border-radius: 20px;
+      font-size: 12px;
+      letter-spacing: 1px;
+      margin-bottom: 18px;
+    }
+
+    h1 {
+      font-size: clamp(35px, 7vw, 58px);
+      line-height: 1.2;
+      margin-bottom: 20px;
+    }
+
+    h1 span {
+      color: #4d9cff;
+    }
+
+    .intro {
+      color: #b8c9e0;
+      font-size: 17px;
+      max-width: 600px;
+      margin-bottom: 32px;
+    }
+
+    .button {
+      display: inline-block;
+      text-decoration: none;
+      color: white;
+      background: #1677ff;
+      padding: 12px 22px;
+      border-radius: 10px;
+      font-weight: bold;
+      transition: 0.2s;
+    }
+
+    .button:hover {
+      background: #4090ff;
+      transform: translateY(-2px);
+    }
+
+    .section-title {
+      font-size: 27px;
+      margin: 55px 0 20px;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 18px;
+    }
+
+    .card {
+      background: #102441;
+      border: 1px solid #29466b;
+      border-radius: 16px;
+      padding: 25px;
+      transition: 0.2s;
+    }
+
+    .card:hover {
+      border-color: #4d9cff;
+      transform: translateY(-3px);
+    }
+
+    .card-icon {
+      font-size: 32px;
+      margin-bottom: 12px;
+    }
+
+    .card h3 {
+      font-size: 21px;
+      margin-bottom: 8px;
+    }
+
+    .card p {
+      color: #b8c9e0;
+      margin-bottom: 20px;
+    }
+
+    .card a {
+      color: #78b5ff;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    footer {
+      text-align: center;
+      padding: 25px;
+      border-top: 1px solid #203858;
+      color: #8ca4c5;
+      font-size: 13px;
+    }
+
+    [dir="rtl"] {
+      text-align: right;
+    }
+
+    [dir="rtl"] header {
+      flex-direction: row;
+    }
+
+    [dir="rtl"] .tag {
+      letter-spacing: 0;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="logo">PREP <span>1-E</span></div>
+
+    <select id="language" aria-label="Choose language">
+      <option value="en">English</option>
+      <option value="ar">العربية</option>
+    </select>
+  </header>
+
+  <main>
+    <section>
+      <div class="tag" data-en="WELCOME TO OUR PROJECT"
+           data-ar="أهلاً بكم في مشروعنا">
+        WELCOME TO OUR PROJECT
+      </div>
+
+      <h1 data-en="Learn. Explore. <span>Discover.</span>"
+          data-ar="تعلّم. استكشف. <span>اكتشف.</span>">
+        Learn. Explore. <span>Discover.</span>
+      </h1>
+
+      <p class="intro"
+         data-en="Welcome to our school project! Explore our presentation and watch our video, all in one place."
+         data-ar="أهلاً بكم في مشروعنا المدرسي! استكشفوا العرض التقديمي وشاهدوا الفيديو في مكان واحد.">
+        Welcome to our school project! Explore our presentation and watch our video, all in one place.
+      </p>
+
+      <a class="button" href="#resources"
+         data-en="Explore the Project"
+         data-ar="استكشف المشروع">
+        Explore the Project
+      </a>
+    </section>
+
+    <section id="resources">
+      <h2 class="section-title"
+          data-en="Project Resources"
+          data-ar="ملفات المشروع">
+        Project Resources
+      </h2>
+
+      <div class="cards">
+        <article class="card">
+          <div class="card-icon">📊</div>
+          <h3 data-en="Presentation"
+              data-ar="العرض التقديمي">
+            Presentation
+          </h3>
+          <p data-en="Open our project presentation."
+             data-ar="افتح العرض التقديمي الخاص بمشروعنا.">
+            Open our project presentation.
+          </p>
+          <a id="presentationLink" href="#"
+             data-en="Coming soon"
+             data-ar="قريباً">
+            Coming soon
+          </a>
+        </article>
+
+        <article class="card">
+          <div class="card-icon">🎬</div>
+          <h3 data-en="Project Video"
+              data-ar="فيديو المشروع">
+            Project Video
+          </h3>
+          <p data-en="Watch our project video."
+             data-ar="شاهد فيديو المشروع الخاص بنا.">
+            Watch our project video.
+          </p>
+          <a id="videoLink" href="#"
+             data-en="Coming soon"
+             data-ar="قريباً">
+            Coming soon
+          </a>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer data-en="PREP 1-E | School Project"
+          data-ar="PREP 1-E | المشروع المدرسي">
+    PREP 1-E | School Project
+  </footer>
+
+  <script>
+    // Add your links here later.
+    const presentationLink = "";
+    const videoLink = "";
+
+    document.getElementById("presentationLink").href =
+      presentationLink || "#";
+
+    document.getElementById("videoLink").href =
+      videoLink || "#";
+
+    const languageSelect = document.getElementById("language");
+
+    function changeLanguage(language) {
+      document.documentElement.lang = language;
+      document.documentElement.dir =
+        language === "ar" ? "rtl" : "ltr";
+
+      document.querySelectorAll("[data-en]").forEach(element => {
+        element.innerHTML = element.getAttribute("data-" + language);
+      });
+    }
+
+    languageSelect.addEventListener("change", event => {
+      changeLanguage(event.target.value);
+    });
+  </script>
+</body>
+</html>
